@@ -7,160 +7,61 @@
 
 Config = {}
 
--- Configuration générale
-Config.Debug = false
-Config.DefaultRank = 'E'
-Config.MaxLevel = 100
-Config.UIEnabled = true -- true = NUI Solo Leveling, false = RageUI ESX
-
--- Configuration des statistiques
-Config.BaseStats = {
-    strength = 10,
-    agility = 10,
-    intelligence = 10,
-    vitality = 10
+-- Configuration de la base de données
+Config.Database = {
+    host = "localhost",
+    user = "root",
+    password = "",
+    database = "solo_leveling"
 }
 
-Config.StatsPerLevel = {
-    strength = 2,
-    agility = 2,
-    intelligence = 2,
-    vitality = 2
-}
-
--- Configuration de l'XP
-Config.BaseXP = 100
-Config.XPMultiplier = 1.5
-Config.RankXP = {
-    E = 0,
-    D = 1000,
-    C = 5000,
-    B = 15000,
-    A = 50000,
-    S = 150000,
-    National = 500000
+-- Configuration du serveur
+Config.Server = {
+    maxLevel = 100,
+    startingGold = 1000,
+    startingExp = 0,
+    expMultiplier = 1.0,
+    goldMultiplier = 1.0,
+    dropRate = 1.0
 }
 
 -- Configuration des classes
 Config.Classes = {
-    {
-        id = 'tank',
-        name = 'Tank',
-        description = 'Spécialiste de la défense et de l\'endurance',
-        baseStats = {
-            strength = 15,
-            agility = 8,
-            intelligence = 5,
-            vitality = 20
-        }
-    },
-    {
-        id = 'mage',
-        name = 'Mage',
-        description = 'Maître des arcanes et de la magie élémentaire',
-        baseStats = {
-            strength = 5,
-            agility = 8,
-            intelligence = 20,
-            vitality = 10
-        }
-    },
-    {
-        id = 'swordsman',
-        name = 'Épéiste',
-        description = 'Expert en combat rapproché',
-        baseStats = {
-            strength = 15,
-            agility = 15,
-            intelligence = 5,
-            vitality = 12
-        }
-    },
-    {
-        id = 'assassin',
-        name = 'Assassin',
-        description = 'Maître de la furtivité et des coups critiques',
-        baseStats = {
-            strength = 12,
-            agility = 20,
-            intelligence = 8,
-            vitality = 8
-        }
-    },
-    {
-        id = 'archer',
-        name = 'Archer',
-        description = 'Expert en combat à distance',
-        baseStats = {
-            strength = 10,
-            agility = 18,
-            intelligence = 10,
-            vitality = 10
-        }
-    },
-    {
-        id = 'healer',
-        name = 'Soigneur',
-        description = 'Maître de la guérison et du support',
-        baseStats = {
-            strength = 5,
-            agility = 10,
-            intelligence = 15,
-            vitality = 15
-        }
-    }
+    maxActiveQuests = 5,
+    maxInventorySlots = 50,
+    maxGuildMembers = 50,
+    maxDungeonPlayers = 4
 }
 
 -- Configuration des donjons
 Config.Dungeons = {
     {
-        id = 'cave_entrance',
-        name = 'Entrée de la Caverne',
-        requiredRank = 'E',
-        minLevel = 1,
-        maxPlayers = 1,
-        waves = {
-            {
-                mobs = {
-                    {type = 'goblin', count = 3, level = 1},
-                    {type = 'wolf', count = 2, level = 1}
-                },
-                boss = nil
-            }
-        },
+        id = "dungeon_001",
+        name = "Donjon des Ombres",
+        minLevel = 10,
+        maxLevel = 20,
+        waves = 5,
         rewards = {
-            xp = 100,
-            rankXp = 50,
+            exp = 1000,
+            gold = 500,
             items = {
-                {name = 'goblin_ear', chance = 0.5, min = 1, max = 3},
-                {name = 'wolf_fang', chance = 0.3, min = 1, max = 2}
+                {id = "item_001", chance = 0.1},
+                {id = "item_002", chance = 0.05}
             }
         }
     },
     {
-        id = 'abandoned_mine',
-        name = 'Mine Abandonnée',
-        requiredRank = 'D',
-        minLevel = 5,
-        maxPlayers = 2,
-        waves = {
-            {
-                mobs = {
-                    {type = 'skeleton', count = 4, level = 5},
-                    {type = 'zombie', count = 3, level = 5}
-                },
-                boss = {
-                    type = 'skeleton_warrior',
-                    level = 7
-                }
-            }
-        },
+        id = "dungeon_002",
+        name = "Donjon du Dragon",
+        minLevel = 30,
+        maxLevel = 40,
+        waves = 8,
         rewards = {
-            xp = 300,
-            rankXp = 150,
+            exp = 3000,
+            gold = 1500,
             items = {
-                {name = 'skeleton_bone', chance = 0.6, min = 2, max = 4},
-                {name = 'zombie_heart', chance = 0.4, min = 1, max = 3}
+                {id = "item_003", chance = 0.15},
+                {id = "item_004", chance = 0.08}
             }
         }
     }
@@ -169,129 +70,167 @@ Config.Dungeons = {
 -- Configuration des mobs
 Config.Mobs = {
     {
-        id = 'goblin',
-        name = 'Gobelin',
-        model = 'a_m_m_bevhills_01',
+        id = "mob_001",
+        name = "Loup des Ombres",
+        level = 10,
         health = 100,
-        damage = 10,
-        defense = 5,
-        speed = 1.0,
-        xp = 50,
-        rankXp = 25,
+        damage = 15,
+        exp = 50,
+        gold = 25,
         drops = {
-            {item = 'goblin_ear', chance = 0.5, min = 1, max = 2},
-            {item = 'goblin_coin', chance = 0.3, min = 1, max = 3}
+            {id = "item_001", chance = 0.1},
+            {id = "item_002", chance = 0.05}
         }
     },
     {
-        id = 'wolf',
-        name = 'Loup',
-        model = 'a_c_wolf',
-        health = 80,
-        damage = 15,
-        defense = 3,
-        speed = 1.2,
-        xp = 40,
-        rankXp = 20,
+        id = "mob_002",
+        name = "Gobelin",
+        level = 15,
+        health = 150,
+        damage = 20,
+        exp = 75,
+        gold = 35,
         drops = {
-            {item = 'wolf_fang', chance = 0.4, min = 1, max = 2},
-            {item = 'wolf_pelt', chance = 0.6, min = 1, max = 1}
+            {id = "item_003", chance = 0.15},
+            {id = "item_004", chance = 0.08}
         }
     }
 }
 
--- Configuration des sorts
-Config.Spells = {
+-- Configuration des items
+Config.Items = {
     {
-        id = 'fireball',
-        name = 'Boule de Feu',
-        magicType = 'fire',
-        manaCost = 30,
-        cooldown = 5,
-        damage = 50,
-        range = 20.0,
-        aoe = 3.0,
-        level = 1,
-        description = 'Lance une boule de feu qui explose à l\'impact'
+        id = "item_001",
+        name = "Cristal d'Ombre",
+        type = "material",
+        description = "Un cristal mystérieux qui émane des ombres",
+        stackable = true,
+        maxStack = 99
     },
     {
-        id = 'ice_spike',
-        name = 'Pic de Glace',
-        magicType = 'ice',
-        manaCost = 35,
-        cooldown = 8,
-        damage = 40,
-        range = 15.0,
-        aoe = 2.0,
+        id = "item_002",
+        name = "Épée en Fer",
+        type = "weapon",
+        description = "Une épée basique en fer",
+        stats = {
+            damage = 10,
+            durability = 100
+        },
+        stackable = false
+    }
+}
+
+-- Configuration des boutiques
+Config.Shops = {
+    {
+        id = "shop_001",
+        name = "Boutique du Forgeron",
+        npc = "npc_blacksmith",
+        items = {
+            {
+                id = "item_001",
+                price = 100,
+                stock = 5
+            },
+            {
+                id = "item_002",
+                price = 150,
+                stock = 3
+            }
+        }
+    }
+}
+
+-- Configuration des quêtes
+Config.Quests = {
+    {
+        id = "quest_001",
+        name = "Début du Voyage",
+        description = "Commencez votre aventure en parlant au guide du village",
         level = 1,
-        description = 'Crée un pic de glace qui transperce les ennemis'
+        type = "main",
+        rewards = {
+            exp = 100,
+            gold = 50,
+            items = {
+                {id = "item_001", amount = 1}
+            }
+        },
+        objectives = {
+            {
+                type = "talk",
+                target = "npc_guide",
+                description = "Parler au guide du village"
+            }
+        }
     }
 }
 
 -- Configuration des guildes
 Config.Guilds = {
+    maxNameLength = 20,
+    minMembersToCreate = 3,
     maxMembers = 50,
-    minLevelToCreate = 10,
-    costToCreate = 10000,
-    roles = {
-        {
-            id = 'leader',
-            name = 'Chef',
-            permissions = {
-                'invite_members',
-                'kick_members',
-                'promote_members',
-                'demote_members',
-                'manage_roles',
-                'manage_bank',
-                'manage_missions',
-                'manage_buildings'
-            }
-        },
-        {
-            id = 'officer',
-            name = 'Officier',
-            permissions = {
-                'invite_members',
-                'kick_members',
-                'promote_members',
-                'manage_missions',
-                'manage_buildings'
-            }
-        }
-    }
-}
-
--- Configuration des points de spawn
-Config.SpawnPoints = {
-    {
-        name = 'Centre-ville',
-        coords = vector3(0, 0, 0),
-        radius = 100.0
-    },
-    {
-        name = 'Forêt',
-        coords = vector3(100, 100, 0),
-        radius = 150.0
-    }
+    creationCost = 10000,
+    dailyTax = 1000
 }
 
 -- Configuration des notifications
 Config.Notifications = {
-    levelUp = {
-        title = 'Niveau Supérieur !',
-        message = 'Vous avez atteint le niveau %s !',
-        type = 'success'
+    defaultDuration = 3000,
+    position = "top-right",
+    sound = true
+}
+
+-- Configuration des logs
+Config.Logs = {
+    enabled = true,
+    logToFile = true,
+    logToDatabase = true,
+    maxLogAge = 30 -- jours
+}
+
+-- Configuration de la localisation
+Config.Localization = {
+    defaultLanguage = "fr",
+    supportedLanguages = {
+        fr = "Français",
+        en = "English",
+        es = "Español"
+    }
+}
+
+-- Configuration des commandes
+Config.Commands = {
+    admin = {
+        "setlevel",
+        "additem",
+        "addgold",
+        "teleport"
     },
-    rankUp = {
-        title = 'Rang Supérieur !',
-        message = 'Vous avez atteint le rang %s !',
-        type = 'success'
+    player = {
+        "class",
+        "inventory",
+        "quests",
+        "craft",
+        "shop",
+        "guild"
+    }
+}
+
+-- Configuration des permissions
+Config.Permissions = {
+    admin = {
+        "setlevel",
+        "additem",
+        "addgold",
+        "teleport",
+        "kick",
+        "ban"
     },
-    dungeonComplete = {
-        title = 'Donjon Terminé !',
-        message = 'Vous avez terminé le donjon %s !',
-        type = 'success'
+    moderator = {
+        "kick",
+        "warn"
     }
 }
 

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solo Leveling FiveM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Interface principale -->
+    <div id="main-ui" class="hidden">
+        <!-- Barre de statut -->
+        <div class="status-bar">
+            <div class="status-item">
+                <span class="icon">👤</span>
+                <span id="player-level">Niveau 1</span>
+            </div>
+            <div class="status-item">
+                <span class="icon">⭐</span>
+                <span id="player-exp">0/100 XP</span>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+            <div class="status-item">
+                <span class="icon">🪙</span>
+                <span id="player-gold">0</span>
+            </div>
+        </div>
+
+        <!-- Interface de classe -->
+        <div id="class-ui" class="hidden">
+            <div class="class-header">
+                <h2>Informations de Classe</h2>
+                <button class="close-btn" onclick="closeClassUI()">×</button>
+            </div>
+            <div class="class-content">
+                <h3 id="class-name">Classe</h3>
+                <div class="class-stats">
+                    <h4>Statistiques</h4>
+                    <div id="class-stats-list"></div>
+                </div>
+                <div class="class-abilities">
+                    <h4>Capacités</h4>
+                    <div id="class-abilities-list"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Interface d'inventaire -->
+        <div id="inventory-ui" class="hidden">
+            <div class="inventory-header">
+                <h2>Inventaire</h2>
+                <button class="close-btn" onclick="closeInventoryUI()">×</button>
+            </div>
+            <div id="inventory-grid"></div>
+        </div>
+
+        <!-- Interface de quêtes -->
+        <div id="quest-ui" class="hidden">
+            <div class="quest-header">
+                <h2>Quêtes</h2>
+                <button class="close-btn" onclick="closeQuestUI()">×</button>
+            </div>
+            <div id="quest-list"></div>
+        </div>
+
+        <!-- Conteneur de notifications -->
+        <div id="notification-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
