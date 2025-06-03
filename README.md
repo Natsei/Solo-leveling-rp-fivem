@@ -5,7 +5,7 @@
   
   [![Version](https://img.shields.io/badge/Version-1.0.0-blue.svg)](https://github.com/yourusername/solo-leveling-fivem)
   [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-  [![Discord](https://img.shields.io/discord/your-discord-id?color=7289DA&label=Discord&logo=discord&logoColor=white)](https://discord.gg/t58J287N)
+  [![Discord](https://img.shields.io/discord/1189522321912897536?color=7289DA&label=Discord&logo=discord&logoColor=blue)](https://discord.gg/t58J287N)
 </div>
 
 ## 📖 Description
