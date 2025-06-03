@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: rgba(10, 15, 30, 0.95);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #e0e6f0;
+    user-select: none;
+}
+
+.class-ui {
+    width: 520px;
+    margin: 40px auto;
+    background: linear-gradient(135deg, #1a223a 80%, #2e3a5c 100%);
+    border-radius: 18px;
+    box-shadow: 0 0 32px 8px #0ff2ff44;
+    padding: 32px 36px 28px 36px;
+    border: 2px solid #0ff2ff88;
+    position: relative;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 18px;
+}
+.header .icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 8px;
+}
+.header h1 {
+    font-size: 2em;
+    margin: 0 0 6px 0;
+    letter-spacing: 2px;
+    color: #0ff2ff;
+    text-shadow: 0 0 8px #0ff2ff88;
+}
+#class-desc {
+    color: #b0cfff;
+    font-size: 1.1em;
+}
+
+.portrait-section {
+    text-align: center;
+    margin-bottom: 18px;
+}
+.portrait {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    border: 3px solid #0ff2ff88;
+    box-shadow: 0 0 16px #0ff2ff44;
+    background: #1a223a;
+}
+
+.stats-section h2, .skills-section h2 {
+    color: #0ff2ff;
+    margin-bottom: 8px;
+    font-size: 1.2em;
+}
+.stats-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px 0;
+}
+.stats-section li {
+    font-size: 1.05em;
+    margin-bottom: 4px;
+    color: #b0cfff;
+}
+
+.skills-section {
+    margin-bottom: 18px;
+}
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.skill-item {
+    background: #22304a;
+    border-radius: 10px;
+    padding: 10px 16px;
+    min-width: 120px;
+    box-shadow: 0 0 8px #0ff2ff33;
+    color: #e0e6f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.skill-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 6px;
+}
+.skill-name {
+    color: #0ff2ff;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+.skill-desc {
+    font-size: 0.95em;
+    color: #b0cfff;
+    margin-bottom: 2px;
+    text-align: center;
+}
+.skill-info {
+    font-size: 0.9em;
+    color: #8fdfff;
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+}
+.actions button {
+    background: linear-gradient(90deg, #0ff2ff 0%, #1a8cff 100%);
+    color: #1a223a;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 22px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 8px #0ff2ff88;
+    transition: background 0.2s;
+}
+.actions button:hover {
+    background: linear-gradient(90deg, #1a8cff 0%, #0ff2ff 100%);
+} 

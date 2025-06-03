@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solo Leveling - Rang</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="rank-ui">
+        <div class="header">
+            <img src="../assets/rank_icon.png" alt="Rank Icon" class="icon">
+            <h1>Rang <span id="rank-name">E</span></h1>
+            <div class="rank-color" id="rank-color"></div>
+        </div>
+        <div class="xp-section">
+            <div class="xp-bar">
+                <div class="xp-fill" id="xp-fill" style="width: 0%"></div>
+            </div>
+            <span id="xp-text">0 / 1000 XP de rang</span>
+        </div>
+        <div class="next-rank-section">
+            <h2>Prochain rang : <span id="next-rank">D</span></h2>
+            <div id="next-rank-info">Bonus : +5% d'attaque</div>
+        </div>
+        <div class="history-section">
+            <h2>Historique</h2>
+            <ul id="rank-history">
+                <!-- Historique dynamique -->
+            </ul>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html> 

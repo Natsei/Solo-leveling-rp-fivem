@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solo Leveling - Classe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="class-ui">
+        <div class="header">
+            <img src="../assets/class_icon.png" alt="Class Icon" class="icon">
+            <h1 id="class-name">Classe</h1>
+            <span id="class-desc">Description de la classe</span>
+        </div>
+        <div class="portrait-section">
+            <img src="../assets/portrait.png" alt="Portrait" class="portrait">
+        </div>
+        <div class="stats-section">
+            <h2>Statistiques de base</h2>
+            <ul>
+                <li>Force : <span id="stat-strength">0</span></li>
+                <li>Agilité : <span id="stat-agility">0</span></li>
+                <li>Intelligence : <span id="stat-intelligence">0</span></li>
+                <li>Vitalité : <span id="stat-vitality">0</span></li>
+            </ul>
+        </div>
+        <div class="skills-section">
+            <h2>Compétences</h2>
+            <div class="skills-list" id="skills-list">
+                <!-- Compétences dynamiques -->
+            </div>
+        </div>
+        <div class="actions">
+            <button id="change-class-btn">Changer de classe</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html> 

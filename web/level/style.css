@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: rgba(10, 15, 30, 0.95);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #e0e6f0;
+    user-select: none;
+}
+
+.level-ui {
+    width: 480px;
+    margin: 40px auto;
+    background: linear-gradient(135deg, #1a223a 80%, #2e3a5c 100%);
+    border-radius: 18px;
+    box-shadow: 0 0 32px 8px #0ff2ff44;
+    padding: 32px 36px 28px 36px;
+    border: 2px solid #0ff2ff88;
+    position: relative;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+.header .icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 8px;
+}
+.header h1 {
+    font-size: 2.2em;
+    margin: 0 0 8px 0;
+    letter-spacing: 2px;
+    color: #0ff2ff;
+    text-shadow: 0 0 8px #0ff2ff88;
+}
+.xp-bar {
+    width: 100%;
+    height: 16px;
+    background: #22304a;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 4px;
+    box-shadow: 0 0 8px #0ff2ff44 inset;
+}
+.xp-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #0ff2ff 0%, #1a8cff 100%);
+    box-shadow: 0 0 12px #0ff2ff88;
+    transition: width 0.4s cubic-bezier(.4,2,.6,1);
+}
+#xp-text {
+    font-size: 1em;
+    color: #b0cfff;
+}
+
+.stats-section {
+    margin-bottom: 24px;
+}
+.stats-section h2 {
+    color: #0ff2ff;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+.stats-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1em;
+}
+.stat-item button {
+    background: #0ff2ff33;
+    border: none;
+    color: #0ff2ff;
+    font-size: 1.1em;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.stat-item button:hover {
+    background: #0ff2ff77;
+}
+.points-remaining {
+    font-size: 1.1em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.actions {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-end;
+}
+.actions button {
+    background: linear-gradient(90deg, #0ff2ff 0%, #1a8cff 100%);
+    color: #1a223a;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 22px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 8px #0ff2ff88;
+    transition: background 0.2s;
+}
+.actions button:hover {
+    background: linear-gradient(90deg, #1a8cff 0%, #0ff2ff 100%);
+}
+
+.details-section h2 {
+    color: #0ff2ff;
+    margin-bottom: 8px;
+    font-size: 1.2em;
+}
+.details-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.details-section li {
+    font-size: 1.05em;
+    margin-bottom: 4px;
+    color: #b0cfff;
+} 

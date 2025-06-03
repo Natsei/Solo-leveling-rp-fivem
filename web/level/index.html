@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solo Leveling - Statistiques</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="level-ui">
+        <div class="header">
+            <img src="../assets/level_icon.png" alt="Level Icon" class="icon">
+            <h1>Niveau <span id="player-level">1</span></h1>
+            <div class="xp-bar">
+                <div class="xp-fill" id="xp-fill" style="width: 0%"></div>
+            </div>
+            <span id="xp-text">0 / 100 XP</span>
+        </div>
+        <div class="stats-section">
+            <h2>Statistiques</h2>
+            <div class="stats-list">
+                <div class="stat-item"><span>Force</span><button class="minus" data-stat="strength">-</button><span id="stat-strength">10</span><button class="plus" data-stat="strength">+</button></div>
+                <div class="stat-item"><span>Agilité</span><button class="minus" data-stat="agility">-</button><span id="stat-agility">10</span><button class="plus" data-stat="agility">+</button></div>
+                <div class="stat-item"><span>Intelligence</span><button class="minus" data-stat="intelligence">-</button><span id="stat-intelligence">10</span><button class="plus" data-stat="intelligence">+</button></div>
+                <div class="stat-item"><span>Vitalité</span><button class="minus" data-stat="vitality">-</button><span id="stat-vitality">10</span><button class="plus" data-stat="vitality">+</button></div>
+            </div>
+            <div class="points-remaining">Points à distribuer : <span id="points-remaining">0</span></div>
+            <div class="actions">
+                <button id="reset-btn">Réinitialiser</button>
+                <button id="confirm-btn">Confirmer</button>
+            </div>
+        </div>
+        <div class="details-section">
+            <h2>Détails</h2>
+            <ul>
+                <li>Attaque : <span id="stat-attack">0</span></li>
+                <li>Défense : <span id="stat-defense">0</span></li>
+                <li>Vitesse : <span id="stat-speed">0</span></li>
+                <li>Mana : <span id="stat-mana">0</span></li>
+            </ul>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html> 
