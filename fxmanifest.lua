@@ -8,7 +8,7 @@
 fx_version 'cerulean'
 game 'gta5'
 
-author 'Claude'
+author 'natsei'
 description 'Solo Leveling RPG System for FiveM'
 version '1.0.0'
 
