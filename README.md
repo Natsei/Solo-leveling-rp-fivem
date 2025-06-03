@@ -1,7 +1,7 @@
 # 🎮 Solo Leveling FiveM
 
 <div align="center">
-  <img src="https://imgur.com/a/KXRtUH5" alt="Solo Leveling FiveM" width="400"/>
+  <img src="https://www.editions-soleil.fr/sites/default/files/styles/bandeau_s/public/2022-03/solo-leveling-bandeau.jpg?h=59e9a709&itok=GF7cFxOV" alt="Solo Leveling FiveM" width="400"/>
   
   [![Version](https://img.shields.io/badge/Version-1.0.0-blue.svg)](https://github.com/Natsei/Solo-leveling-rp-fivem)
   [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
