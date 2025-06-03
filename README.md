@@ -100,14 +100,13 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
 
 ## 📞 Support
 
-- Discord : [Rejoindre le serveur](https://discord.gg/your-discord)
-- Email : support@yourdomain.com
-- Issues : [GitHub Issues](https://github.com/yourusername/solo-leveling-fivem/issues)
+- Discord : [Rejoindre le serveur](https://discord.gg/t58J287N)
+- Issues : [GitHub Issues](https://github.com/Natsei/Solo-leveling-rp-fivem/issues)
 
 ---
 
 <div align="center">
-  <sub>Built with ❤️ by <a href="https://github.com/yourusername">Your Name</a></sub>
+  <sub>Built with ❤️ by <a href="https://github.com/Natsei">natsei</a></sub>
 </div>
 
 ## Structure du Projet
@@ -178,6 +177,6 @@ Pour toute question ou problème :
 
 ## Crédits
 
-- Développé par [Votre Nom]
+- Développé par natsei
 - Inspiré par le manhwa Solo Leveling
 - Utilise le framework FiveM
