@@ -1,7 +1,7 @@
 --[[
     Solo Leveling FiveM Server
     Quest System Module
-    Author: Claude
+    Author: natsei
     Version: 1.0.0
 ]]
 

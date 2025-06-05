@@ -1,7 +1,7 @@
 --[[
     Solo Leveling FiveM Server
     Database Structure
-    Author: Claude
+    Author: natsei
     Version: 1.0.0
 ]]
 
